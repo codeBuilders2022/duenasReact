@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import React from 'react'
 
 import Button from '../../components/atoms/Button/Button'
@@ -50,6 +50,8 @@ import BgM_ from '../../assets/images/banner_movil.jpg'
 
 
 import ViewImage from '../../components/atoms/ViewImage/ViewImage'
+import Cotiza from '../../components/molecules/Cotiza/Cotiza'
+import Cotizador from '../../components/molecules/Cotizador/Cotizador'
 // import Cotizador from '../../components/molecules/Cotizador/Cotizador'
 // import Cotiza from '@/components/molecules/Cotiza/Cotiza'
 
@@ -258,10 +260,11 @@ export default function App() {
   const [viewImg, setViewImg] = useState(false)
   const [urlImg, setUrlImg] = useState()
   const [showQuoter, setShowQuoter] = useState(false)
+  const headingRef = useRef(null);
 
   return (
     <div className={"block_"}>
-        <div className="secct1">
+        <div className="secct1" id='home1'>
           <div className='cnt_img1'>
             <img src={Bg_} className='cg_img'/>
             <img src={BgM_} className='cg_imgM'/>
@@ -288,7 +291,7 @@ export default function App() {
             </div>
           ))}
         </div>
-        <div className={"secct4"}>
+        <div className={"secct4"} >
             {listWorks.map((_, idx) => (
               <div className={"inside4"} key={idx}>
                 <img src={_.icon} alt="" className={"icon_"}/>
@@ -297,8 +300,8 @@ export default function App() {
               </div>
             ))}
         </div>
-        <div className={"secct5"}>
-          <div className={"inside_a5"}>
+        <div className={"secct5"} id='Us2'>
+          <div className={"inside_a5"} >
               <Mision />
               <Vision />
           </div>
@@ -327,11 +330,7 @@ export default function App() {
           
           </div>
         </div>
-        {/* <div className={ secct7}>
-          <h1 className={ title_secct7}>CONTRATA A LOS PROFECIONALES</h1>
-          <Button btnText={"COTIZA"} className={"btn_byellow"}/>
-        </div> */}
-        {/* <Cotiza></Cotiza> */}
+        <Cotiza />
         <div className={"secct8"}>
           <div className={"inside_secct8"}>
             <h1 className={"title_8"}>Proyectos</h1>
@@ -346,7 +345,7 @@ export default function App() {
             </div>
           </div>
           {viewImg && <ViewImage setValue={setViewImg} img_g={urlImg}/>}
-          {/* {showQuoter?<Cotizador setOpenModal={setShowQuoter}></Cotizador>:""} */}
+          {showQuoter && <Cotizador setOpenModal={setShowQuoter} />}
         </div>
     </div>
   )
