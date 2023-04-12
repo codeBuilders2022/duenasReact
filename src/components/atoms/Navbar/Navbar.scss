@@ -1,0 +1,43 @@
+.HeaderContact {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #012060;
+
+  .cnt_h1_img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icnos_ {
+      width: 10px;
+      height: 15px;
+    }
+    .text_ {
+      font-size: 12px;
+    }
+  }
+
+  .cnt_networks {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    .networks {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .tik_tok{
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+    }
+  }
+  h1{
+    color: white;
+  }
+}

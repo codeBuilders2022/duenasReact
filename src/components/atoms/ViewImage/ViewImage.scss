@@ -1,0 +1,29 @@
+.ViewImage{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 105;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .inside_ViewImage{
+        cursor: auto;
+        width: 90%;
+        height: 495px;
+
+        @media (min-width: 1000px) {
+            width: 500px;
+        }
+
+        .img_as{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

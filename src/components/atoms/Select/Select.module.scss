@@ -1,0 +1,161 @@
+.SelectWrapper {
+    .Select {
+        height: 47px !important;
+        width: 100%;
+        padding: 0 10px !important;
+        font-family: "Montserrat";
+        text-align: center;
+        border: none !important;
+        outline: none !important;
+        border-radius: 10px !important;
+        border: 1px solid #c8c6c6 !important;
+        background: white;
+        transition: border-color 0.2s !important;
+        cursor: pointer !important;
+        box-shadow: none !important;
+
+        .p-dropdown-label.p-inputtext {
+            font-size: 11px !important;
+            color: #777 !important;
+            text-decoration: none solid rgb(0, 0, 0) !important;
+            padding:3px 0.75rem!important;
+        }
+
+        // &:hover {
+        //     border: none !important;
+        //     border-bottom: 2px solid #c8c6c6 !important;
+        // }
+
+        &:focus {
+            transition: border-color 0.2s;
+            border: none !important;
+            border-bottom: 2px solid #eccd98 !important;
+            box-shadow: none !important;
+        }
+
+        &::placeholder {
+            font-family: "Roboto", sans-serif;
+            font-size: 11px;
+            color: #777;
+            text-decoration: none solid rgb(0, 0, 0);
+        }
+
+        .p-dropdown-trigger {
+            width: 2rem !important;
+
+            .p-dropdown-trigger-icon {
+                font-size: 14px !important;
+                margin-top: 6px !important;
+            }
+        }
+    }
+    // .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+//     padding: 0.75rem 0;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.p-dropdown-panel .p-dropdown-items {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// .p-dropdown-items {
+   
+
+//     .p-dropdown-item {
+//         &:hover {
+//             background-color: aquamarine;
+//             width: 133px;
+//             height: 35px;
+//             border-radius: 20px;
+//             display: flex;
+//             align-items: center;
+//         }
+//     }
+// }
+
+.p-dropdown-panel {
+    padding: 0 !important;
+
+    .p-highlight:focus {
+        box-shadow: none !important;
+    }
+
+    .p-dropdown-header {
+        padding: 6px 10px !important;
+    }
+
+   
+    .p-highlight {
+        color: #000b !important;
+        background: #eee5 !important;
+    }
+
+    .p-checkbox-box {
+        // background: linear-gradient(90deg, #fbb030 0%, #ffe730 100% ) !important;
+        background: #eee5 !important;
+        border: none !important;
+
+        &.p-highlight {
+            background: linear-gradient(
+                90deg,
+                #fbb030 0%,
+                #ffe730 100%
+            ) !important;
+        }
+
+        .p-checkbox-icon {
+            font-size: 12px !important;
+        }
+    }
+
+    .p-dropdown-filter-container {
+        .p-inputtext {
+            height: 33px !important;
+            width: 100% !important;
+            padding: 3px 10px !important;
+            font-family: "Metropolis" !important;
+            font-size: 11px !important;
+            color: #777 !important;
+            -webkit-text-decoration: none solid rgb(0, 0, 0) !important;
+            text-decoration: none solid rgb(0, 0, 0) !important;
+            border: none !important;
+            outline: none !important;
+            border-radius: 10px !important;
+            border-bottom: 2px solid #c8c6c6 !important;
+            transition: border-color 0.2s !important;
+
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+
+        .p-dropdown-filter-icon {
+            font-size: 14px !important;
+            color: #0009 !important;
+            font-weight: 900 !important;
+        }
+    }
+
+    .p-dropdown-item {
+        padding: 10px !important;
+        font-size: 12px;
+    }
+
+    .p-dropdown-item:focus {
+        box-shadow: none !important;
+    }
+
+    .p-dropdown-empty-message {
+        font-size: 12px;
+        padding: 3px 1.25rem;
+    }
+}
+
+}
+

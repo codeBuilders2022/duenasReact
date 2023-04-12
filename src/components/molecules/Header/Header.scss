@@ -1,0 +1,123 @@
+.cnt_header {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  z-index: 1002;
+  background: transparent;
+
+  &.active {
+    top: 0;
+    left: 0;
+    background: #2668b0;
+  }
+
+  .cnt_nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      justify-content: space-between;
+      padding: 0 30px;
+
+    //   position: relative;
+    }
+
+    .cnt_logo {
+      // width: 80px;
+      height: 50px;
+
+      .logo_ {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      gap: 45px;
+      font-weight: bold;
+      list-style: none;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+
+      .links_ {
+        color: #fff ;
+        font-family: 14px;
+        cursor: pointer;
+      }
+    }
+
+    .cnt_menu {
+      display: none;
+
+      @media (max-width: 1000px) {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        .menu_ {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .bg_white_{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+
+        .cnt_links_ {
+          position: absolute;
+          top: 45px;
+          left: calc(50% - 45%);
+          width: 90%;
+          height: 300px;
+          background: #2668B0;
+          border-radius: 10px;
+    
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    
+          .close_modal {
+            position: absolute;
+            top: 15px;
+            right: 21px;
+            color: white;
+            font-weight: bold;
+          }
+    
+          .navigation__ {
+            font-weight: bold;
+            list-style: none;
+            width: 100%;
+            padding: 0 40px;
+    
+            .links__a {
+              height: 50px;
+              display: flex;
+              align-items: center;
+              color: #000;
+            }
+          }
+        }
+
+    }
+
+  }
+  a{
+    color: white !important;
+  }
+}
