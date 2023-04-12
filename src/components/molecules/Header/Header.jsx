@@ -14,8 +14,8 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   const secctions = [
-    { id: 2, label: "Home", url: "/" },
-    { id: 3, label: "Nosotros", url: "/" },
+    { id: 2, idref: "home1", label: "Home", url: "/" },
+    { id: 3, idref: "Us2", label: "Nosotros", url: "/" },
     { id: 4, label: "Servicios", url: "/services" },
     { id: 4, label: "Cotiza", url: "/services" },
     { id: 5, label: "Contacto", url: "/contact" },
@@ -35,6 +35,13 @@ const Header = () => {
     window.addEventListener("scroll", changeBg)
   }, [])
 
+   // function to go to a selected id of the page
+   const scrollToMyRef = (id) => {
+    document.getElementById(`${id}`)?.scrollIntoView({ behavior: "smooth" });
+    // setInd(id)
+};
+
+
 
   return (
     <header className={`cnt_header ${navbarState && "active"}`}>
@@ -46,7 +53,7 @@ const Header = () => {
         </div>
         <ul className={"navigation"}>
           {secctions.map((_, idx) => (
-            <li key={idx} className={"links_"}>
+            <li key={idx} className={"links_"} onClick={() => scrollToMyRef(_.idref && _.idref)}>
               <NavLink to={_.url}>
                 {_.label}
               </NavLink>
@@ -62,7 +69,7 @@ const Header = () => {
               <label className={"close_modal"} onClick={() => setOpenMenu(false)}>X</label>
               <ul className={"navigation__"}>
                 {secctions.map((_, idx) => (
-                  <li key={idx} className={"links__a"} onClick={() => setOpenMenu(false)}>
+                  <li key={idx} className={"links__a"} onClick={() => (setOpenMenu(false), scrollToMyRef(_.idref && _.idref))}>
                     <NavLink to={_.url}>
                       {_.label}
                     </NavLink>
