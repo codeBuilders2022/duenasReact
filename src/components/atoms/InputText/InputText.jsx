@@ -1,7 +1,7 @@
 import { Skeleton } from 'primereact/skeleton'
 
 //style
-import styles from './InputText.module.scss'
+import './InputText.scss'
 
 function InputText({
     placeholder,
@@ -19,15 +19,15 @@ function InputText({
     return (
 
         !skeleton ?
-            <div className={`${styles.inputContainer}`} style={{ width: width }}>
-                {title && <div className={styles.title_input}>{title}</div>}
-                <div className={styles.inputShadow}>
+            <div className={`${"inputContainer"}`} style={{ width: width }}>
+                {title && <div className={"title_input"}>{title}</div>}
+                <div className={"inputShadow"}>
                     <input
                         id={id}
                         type={type}
                         value={value}
                         onChange={onChange}
-                        className={`${styles.input} ${className}`}
+                        className={`${"input"} ${className}`}
                         placeholder={placeholder}
                         disabled={disabled}
                     />
