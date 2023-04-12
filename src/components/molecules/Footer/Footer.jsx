@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={"col5"}>
-          <NavLink href='/admin'>
+          <NavLink to='/admin'>
             <img src={gear} className={"gear"} alt="" />
           </NavLink>
         </div>
