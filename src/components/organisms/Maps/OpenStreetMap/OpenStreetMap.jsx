@@ -13,6 +13,11 @@ const OpenStreetMap = ({ centerMap, nameCity, skeleton }) => {
         setMapLoaded(true);
     }, []);
 
+    const mapRef = useRef(null);
+    useEffect(() => {
+        mapRef.current?.setView(centerMap, 15)
+    }, [centerMap])
+
     const iconMap = L.icon({
         iconUrl: marker,
         iconSize: [30, 30],
@@ -20,7 +25,7 @@ const OpenStreetMap = ({ centerMap, nameCity, skeleton }) => {
         popupAnchor: [-3, -40],
         shadowSize: [45, 55],
         shadowAnchor: [0, 25],
-        shadowUrl:"https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png"
+        shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png"
     });
 
     return (
@@ -31,7 +36,7 @@ const OpenStreetMap = ({ centerMap, nameCity, skeleton }) => {
                 zoom={17}
                 style={{ height: "400px", borderRadius: "10px" }}
                 className="map-container"
-            // ref={mapRef}
+                ref={mapRef}
 
             >
                 <TileLayer
