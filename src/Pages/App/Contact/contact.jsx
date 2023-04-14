@@ -72,7 +72,7 @@ const Contact = () => {
     return (
         <div className='Contact' suppressContentEditableWarning={true}>
             <img src={contactImg} className='imageBaner' alt="imageBanner" />
-            <div className='title'>
+            <div className='titlee'>
                 <h1>Contacto</h1>
             </div>
             <div className='mainContainer'>
