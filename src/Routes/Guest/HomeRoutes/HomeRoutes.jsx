@@ -12,6 +12,7 @@ import "primereact/resources/primereact.min.css";
 //icons
 import "primeicons/primeicons.css";     
 import Admin from "../../../Pages/Admin/admin";
+import Contact from "../../../Pages/App/Contact/contact";
 const HomeRoutes = () => {
     return (
         <Routes> 
@@ -28,6 +29,14 @@ const HomeRoutes = () => {
                 element={
                     <Suspense fallback={<></>}>
                         <Services/>
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/contact"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Contact/>
                     </Suspense>
                 }
             />

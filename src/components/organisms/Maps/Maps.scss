@@ -1,0 +1,108 @@
+.Maps {
+    // @media screen and (max-width: '1000px') {
+    //     margin: 20px 20px 20px 100px !important;
+    //     width: 80% !important;
+    // }
+
+    @media screen and (max-width: '480px') {
+        margin: 0 auto !important;
+    }
+
+    width: 100%;
+    // padding: 20px;
+    // position: relative;
+
+    .searchMap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 86px;
+        left: 40px;
+        z-index: 500;
+    }
+
+    .InputSearch {
+        position: relative !important;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+
+    .InputSearch .input-shadowS {
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+        max-width: 500px !important;
+        background-color: rgba(255, 255, 255, 0);
+        width: 100% !important;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        input {
+            @media screen and (max-width: '1200px') {
+                width: 500px !important;
+            }
+
+            @media screen and (max-width: '478px') {
+                width: 400px !important;
+            }
+
+            @media screen and (max-width: '480px') {
+                width: 300px !important;
+            }
+
+            width: 600px !important;
+            height: 40px;
+            opacity: 0.8;
+            padding: 0px 50px 0 20px;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            background-size: cover;
+            font-family: "Karla";
+            font-size: 12px;
+            color: #000000;
+        }
+
+        img {
+            position: absolute !important;
+            right: 20px;
+        }
+    }
+
+    .searchMarker {
+        @media screen and (max-width: '480px') {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        padding-right: 40px;
+        gap: 20px;
+        top: 31px;
+        z-index: 500;
+
+        .container_sM {
+            width: 180px;
+            height: 40px;
+            border: 1px solid #d54c4c;
+            border-radius: 50px;
+            background-size: cover;
+            background-color: white;
+            font-family: ProximaNova;
+            font-size: 14px;
+            color: #d54c4c;
+            text-decoration: none solid rgb(213, 76, 76);
+            text-align: center;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+    }
+    .leaflet-interactive{
+        background: #000000ab;
+        border-radius: 50%;
+    }
+}
