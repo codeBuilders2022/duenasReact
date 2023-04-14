@@ -54,9 +54,9 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault()
         if (SubmitValidation(inputList, setInputList)) {
-            const serviceID = `${process.env.API_SERVICEID}`; //protected variables in the .env file
-            const templateID = `${process.env.API_TEMPLATEID}`; //protected variables in the .env file
-            emailjs.init(`${process.env.API_KEY}`) //protected variables in the .env file
+            const serviceID = `${process.env.REACT_APP_SERVICEID}`; //protected variables in the .env file
+            const templateID = `${process.env.REACT_APP_TEMPLATEID}`; //protected variables in the .env file
+            emailjs.init(`${process.env.REACT_APP_KEY}`) //protected variables in the .env file
             emailjs.sendForm(serviceID, templateID, e.target)
                 .then((result) => {
                     toast.current.show({ severity: 'info', summary: 'Listo', detail: 'Su información se envió con éxito', });
