@@ -14,10 +14,9 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   const secctions = [
-    { id: 2, idref: "home1", label: "Home", url: "/" },
+    { id: 2, idref: "home1", label: "Inicio", url: "/" },
     { id: 3, idref: "Us2", label: "Nosotros", url: "/" },
     { id: 4, label: "Servicios", url: "/services" },
-    { id: 4, label: "Cotiza", url: "/services" },
     { id: 5, label: "Contacto", url: "/contact" },
   ]
 
@@ -41,6 +40,12 @@ const Header = () => {
     // setInd(id)
 };
 
+const activeLinks = ({isActive}) => {
+  return{
+    color: isActive ? "#fd0000" : null
+  }
+}
+
 
 
   return (
@@ -54,7 +59,7 @@ const Header = () => {
         <ul className={"navigation"}>
           {secctions.map((_, idx) => (
             <li key={idx} className={"links_"} onClick={() => scrollToMyRef(_.idref && _.idref)}>
-              <NavLink to={_.url}>
+              <NavLink to={_.url} >
                 {_.label}
               </NavLink>
             </li>
@@ -62,7 +67,7 @@ const Header = () => {
         </ul>
         <div className={"cnt_menu"} onClick={() => setOpenMenu(true)}>
           <img src={Menu_movil} alt="" className={"menu_"} />
-        </div>
+        </div> 
         {openMenu &&
           <div className={"bg_white_"}>
             <div className={"cnt_links_"}>

@@ -7,11 +7,12 @@
         position: absolute;
         object-position: center;
         width: 100%;
+        height: 260px;
         object-fit: cover;
         height: 260px;
     }
 
-    .title {
+    .titlee {
         @media (max-width: 1000px) {
             background-size: cover;
         }
@@ -19,7 +20,7 @@
         position: relative;
 
         width: 100%;
-        height: 280px;
+        height: 260px;
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
