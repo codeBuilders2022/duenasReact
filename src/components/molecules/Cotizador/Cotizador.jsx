@@ -121,7 +121,7 @@ const Cotizador = ({ setOpenModal }) => {
                         ""
                 }
                 <div className={"contactDirectContainer"}>
-                    <NavLink to='https://wa.me/+5213344703129' className={"contactDirect"}>
+                    <NavLink to='https://wa.me/+5213332344601' className={"contactDirect"}>
                         <div>Contacto</div>
                         <img src={ws} className={"imgWs"} alt="" />
                     </NavLink>

@@ -14,9 +14,8 @@ const Contact = () => {
     const [id, setId] = useState(0)
     const toast = useRef(null);
     const data = [
-        { id: 0, contry: "México", address: "Esta es la dirección en México", phone: "Este es el teléfono", email: "Este es el email", location: [20.6842, -103.3831] },
-        { id: 1, contry: "USA", address: "Esta es la dirección USA", phone: "Este es el teléfono", email: "Este es el email", location: [29.834753, -95.442522] },
-        { id: 2, contry: "Canadá", address: "Esta es la dirección Canadá", phone: "Este es el teléfono", email: "Este es el email", location: [45.495177, -73.630856] }
+        { id: 0, contry: "México", address: "San Carlos 44, 45690, El Salto, Jalisco ", phone: "33 3234 4601", email: "osanmart.2214@icloud.com", location: [20.6842, -103.3831] },
+
     ]
     const [inputList, setInputList] = useState({
         name: { value: null, validationType: "empty" },
