@@ -159,13 +159,13 @@ export default function App() {
     {
       id: 2,
       img: C2,
-      descrip: "2. Profesionales en Construcción recibirán un aviso de tu proyecto.",
+      descrip: "2. Profesionales en Construcción recibirán una notificación  de tu proyecto.",
       class: "C2"
     },
     {
       id: 3,
       img: C3,
-      descrip: "3. Aquellos que estén interesados se pondran en contacto para darte una cotización.",
+      descrip: "3. Los expertos se pondrán en contacto para darte una cotización.",
       class: "C3"
     },
   ]
