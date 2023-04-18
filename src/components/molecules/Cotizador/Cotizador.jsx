@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import './Cotizador.scss'
 import ws from '../../../assets/images/ws.svg'
 import axios from "axios";
+import { Link, NavLink } from "react-router-dom";
 
 
 const strapyServer = process.env.REACT_APP_STRAPI_SERVER;
@@ -38,7 +39,7 @@ const Cotizador = ({ setOpenModal }) => {
                 // optionsstep1Copy[5].price = data.tablaroca
                 // setOptionsstep1(optionsstep1Copy)
                 setResponse([data])
- 
+
             })
 
             .catch((error) => {
@@ -57,9 +58,8 @@ const Cotizador = ({ setOpenModal }) => {
             setOptionsstep1(optionsstep1Copy)
         }
     }, [response])
-    useEffect(()=>
-    {
-    },[optionsstep1])
+    useEffect(() => {
+    }, [optionsstep1])
     useEffect(() => {
         if (inputM2) {
             optionsstep1.map((item) => {
@@ -121,10 +121,11 @@ const Cotizador = ({ setOpenModal }) => {
                         ""
                 }
                 <div className={"contactDirectContainer"}>
-                    <button className={"contactDirect"}>
+                    <NavLink to='https://wa.me/+5213344703129' className={"contactDirect"}>
                         <div>Contacto</div>
                         <img src={ws} className={"imgWs"} alt="" />
-                    </button>
+                    </NavLink>
+
                 </div>
 
             </div>
