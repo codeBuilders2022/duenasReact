@@ -14,10 +14,9 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   const secctions = [
-    { id: 2, idref: "home1", label: "Home", url: "/" },
+    { id: 2, idref: "home1", label: "Inicio", url: "/" },
     { id: 3, idref: "Us2", label: "Nosotros", url: "/" },
     { id: 4, label: "Servicios", url: "/services" },
-    { id: 4, label: "Cotiza", url: "/services" },
     { id: 5, label: "Contacto", url: "/contact" },
   ]
 
