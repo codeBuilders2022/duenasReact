@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       <Header />
-      <NavLink to="https://wa.me/+5215213332344601" className={"ws"}>
+      <NavLink to="https://wa.me/+5215213332344601" target="_blank" rel="noreferrer" className={"ws"}>
         <img src={Whatsapp} alt="" />
       </NavLink>
       {children}
