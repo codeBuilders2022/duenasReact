@@ -14,7 +14,7 @@ const Contact = () => {
     const [id, setId] = useState(0)
     const toast = useRef(null);
     const data = [
-        { id: 0, contry: "México", address: "C. San Carlos 42, Santa Rosa del Valle, 45690 Las Pintas, Jal. ", phone: "33 3234 4601", email: "osanmart.2214@icloud.com", location: [20.559827, -103.321476] },
+        { id: 0, contry: "México", address: "C. San Carlos 42, Santa Rosa del Valle, 45690 Las Pintas, Jal. ", phone: "33 3234 4601", email: "osvaldo_duenas@duenasconstrucciones.com", location: [20.559827, -103.321476] },
 
     ]
     const [inputList, setInputList] = useState({
