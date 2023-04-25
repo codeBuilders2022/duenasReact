@@ -112,8 +112,8 @@ const Cotizador = ({ setOpenModal }) => {
                             <div className={"selectContainer"} style={{ marginTop: "30px" }}>
                                 <div className={"totalContainer"}>
 
-                                    <div> precio por m2 : ${price}</div>
-                                    <b>total: ${total}</b>
+                                    <div> precio por m2 (Sin material): ${price}</div>
+                                    <b>total: $ {total.toLocaleString('es-ES', { minimumFractionDigits: 2 })}</b>
 
                                 </div>
                             </div>
